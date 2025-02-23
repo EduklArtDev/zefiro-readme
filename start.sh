@@ -15,22 +15,48 @@ read descricao
 mdDesc="
 ## Descrição
 ${descricao^}
+![Licença](https://img.shields.io/badge/Licen%C3%A7a-MIT-green)
+![Versão](https://img.shields.io/badge/Vers%C3%A3o-1.0.0-brightgreen)
 "
+echo "stts 1,2?: "
+read stts
 
-mdStts="
+if [ "$stts" == "1" ]; then
+   mdStts="
 ## Status
 ![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
 "
+elif [ "$stts" == "2" ]; then
+   mdStts="
+## Status
+![Status](https://img.shields.io/badge/status-%20finalizado-gren)
+"
+fi
 
 echo 'Tecs usadas?: '
 read tecs
 
-mdTecs="
-## Tecnologias Usadas
-${tecs^}
+if [ "$tecs" == "js" ]; then
+   mdTecs="
+## Linguagem
+![Linguagem](https://img.shields.io/badge/Linguagem-JS-yellow)
 "
+elif [ "$tecs" == "php" ]; then 
+   mdTecs="
+## Linguagem
+![Linguagem](https://img.shields.io/badge/Linguagem-PHP-blue)
+"
+elif [ "$tecs" == "shell" ]; then 
+   mdTecs="
+## Linguagem
+![Linguagem](https://img.shields.io/badge/Linguagem-ShellScript-gren)
+"
+fi
+
 
 mdCon="## Contribuindo
+
+![Contribuições](https://img.shields.io/badge/Contribui%C3%A7%C3%B5es-Bem--vindas-blueviolet)
 
 Se você deseja contribuir para o projeto, siga estas etapas:
 
@@ -56,6 +82,7 @@ mdFinal="
 ## Agradecimentos
 
 ${agrade^}
+![Feito com ❤️](https://img.shields.io/badge/Feito%20com-%E2%9D%A4-red)
 
 ## Contato
 
