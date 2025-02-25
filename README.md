@@ -1,9 +1,9 @@
 
-# Teste
+# Gerador de README
 
 
 ## Descrição
-Sajdb
+É um simlpes .sh que gera meus arqs README tudo padronizado e automatizado... me ajuda legal.
 
 
 ## Status
@@ -11,6 +11,9 @@ Sajdb
 ![Licença](https://img.shields.io/badge/Licen%C3%A7a-MIT-green)
 ![Versão](https://img.shields.io/badge/Vers%C3%A3o-1.0.0-brightgreen)
 
+
+## Linguagem
+![Linguagem](https://img.shields.io/badge/Linguagem-ShellScript-gren)
 
 ## Contribuindo
 
@@ -35,7 +38,7 @@ Se você deseja contribuir para o projeto, siga estas etapas:
 
 ## Agradecimentos
 
-Asd,m
+Sla...
 ![Feito com ❤️](https://img.shields.io/badge/Feito%20com-%E2%9D%A4-red)
 
 ## Contato
