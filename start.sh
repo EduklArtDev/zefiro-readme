@@ -1,22 +1,46 @@
 #! /bin/bash
 
+defCor="\e[32m"
+defCorTwo="\e[38;5;93m"
+restCor="\e[0m"
+
+echo -e "${defCorTwo}
+
+░░░░░░░░░░░░░░░░░░░░░▄▀░░▌
+░░░░░░░░░░░░░░░░░░░▄▀▐░░░▌
+░░░░░░░░░░░░░░░░▄▀▀▒▐▒░░░▌
+░░░░░▄▀▀▄░░░▄▄▀▀▒▒▒▒▌▒▒░░▌
+░░░░▐▒░░░▀▄▀▒▒▒▒▒▒▒▒▒▒▒▒▒█
+░░░░▌▒░░░░▒▀▄▒▒▒▒▒▒▒▒▒▒▒▒▒▀▄
+░░░░▐▒░░░░░▒▒▒▒▒▒▒▒▒▌▒▐▒▒▒▒▒▀▄
+░░░░▌▀▄░░▒▒▒▒▒▒▒▒▐▒▒▒▌▒▌▒▄▄▒▒▐
+░░░▌▌▒▒▀▒▒▒▒▒▒▒▒▒▒▐▒▒▒▒▒█▄█▌▒▒▌
+░▄▀▒▐▒▒▒▒▒▒▒▒▒▒▒▄▀█▌▒▒▒▒▒▀▀▒▒▐░░░▄
+▀▒▒▒▒▌▒▒▒▒▒▒▒▄▒▐███▌▄▒▒▒▒▒▒▒▄▀▀▀▀
+▒▒▒▒▒▐▒▒▒▒▒▄▀▒▒▒▀▀▀▒▒▒▒▄█▀░░▒▌▀▀▄▄
+▒▒▒▒▒▒█▒▄▄▀▒▒▒▒▒▒▒▒▒▒▒░░▐▒▀▄▀▄░░░░▀
+▒▒▒▒▒▒▒█▒▒▒▒▒▒▒▒▒▄▒▒▒▒▄▀▒▒▒▌░░▀▄
+▒▒▒▒▒▒▒▒▀▄▒▒▒▒▒▒▒▒▀▀▀▀▒▒▒▄▀
+${restCor}
+"
+
+echo -e "${defCor}\n@edukl.art\n${restCor}"
+
 touch README.md
 
-echo 'Titulo?: '
+echo -e "Titulo?: "
 read titulo
 
 mdTitle="
 # ${titulo^}
 "
 
-echo 'Descrição?: '
+echo "Descrição?: "
 read descricao
 
 mdDesc="
 ## Descrição
 ${descricao^}
-![Licença](https://img.shields.io/badge/Licen%C3%A7a-MIT-green)
-![Versão](https://img.shields.io/badge/Vers%C3%A3o-1.0.0-brightgreen)
 "
 echo "stts 1,2?: "
 read stts
@@ -25,15 +49,19 @@ if [ "$stts" == "1" ]; then
    mdStts="
 ## Status
 ![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
+![Licença](https://img.shields.io/badge/Licen%C3%A7a-MIT-green)
+![Versão](https://img.shields.io/badge/Vers%C3%A3o-1.0.0-brightgreen)
 "
 elif [ "$stts" == "2" ]; then
    mdStts="
 ## Status
 ![Status](https://img.shields.io/badge/status-%20finalizado-gren)
+![Licença](https://img.shields.io/badge/Licen%C3%A7a-MIT-green)
+![Versão](https://img.shields.io/badge/Vers%C3%A3o-1.0.0-brightgreen)
 "
 fi
 
-echo 'Tecs usadas?: '
+echo "Tecs usadas?: "
 read tecs
 
 if [ "$tecs" == "js" ]; then

@@ -1,19 +1,16 @@
 
-# Gerador de README
+# Teste
 
 
 ## Descrição
-Padronizador e gerador de README
-![Licença](https://img.shields.io/badge/Licen%C3%A7a-MIT-green)
-![Versão](https://img.shields.io/badge/Vers%C3%A3o-1.0.0-brightgreen)
+Sajdb
 
 
 ## Status
 ![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
+![Licença](https://img.shields.io/badge/Licen%C3%A7a-MIT-green)
+![Versão](https://img.shields.io/badge/Vers%C3%A3o-1.0.0-brightgreen)
 
-
-## Linguagem
-![Linguagem](https://img.shields.io/badge/Linguagem-ShellScript-gren)
 
 ## Contribuindo
 
@@ -38,7 +35,7 @@ Se você deseja contribuir para o projeto, siga estas etapas:
 
 ## Agradecimentos
 
-Agradeço a quem colaborar com o projeto que por enquanto ta bem simples.
+Asd,m
 ![Feito com ❤️](https://img.shields.io/badge/Feito%20com-%E2%9D%A4-red)
 
 ## Contato
