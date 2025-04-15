@@ -1,28 +1,55 @@
+import json
+from asciimatics.effects import Cycle, Stars # type: ignore
+from asciimatics.renderers import FigletText # type: ignore
+from asciimatics.scene import Scene # type: ignore
+from asciimatics.screen import Screen # type: ignore
 
- <div align="center">
-
-# 🌟 Zefiro-ReadMe
-
-![Status](https://img.shields.io/badge/Status-Em%20Desenvolvimento-orange?style=for-the-badge)
-![Licença](https://img.shields.io/badge/Licença-MIT-green?style=for-the-badge)
-![Estrelas](https://img.shields.io/github/stars/EduKlArtDev/zefiro-readme?style=social)
-
-**A README.md standardizer for use in github projects. It generates a completely standardized and useful .md for github. Take advantage of it. Thank you.** 🚀
-
-</div>
-
-
-
-## 🚀 Como Executar 
-To use it, just git clone ```https://github.com/EduklArtDev/zefiro-readme.git``` open the project and use... ``python3 start.py``. Simple.
-
-
-
-## 🛠 Tecnologias Utilizadas
-![Python](https://img.shields.io/badge/Python-3.9-blue?logo=python)
+def demo(screen):
+    effects = [
+        Cycle(
+            screen,
+            FigletText("Zefiro", font='big'),
+            int(screen.height / 2 - 8)),
+        Cycle(
+            screen,
+            FigletText("Readme", font='big'),
+            int(screen.height / 2 + 3)),
+        Stars(screen, 200)
+    ]
+    screen.play([Scene(effects, duration=30)], repeat=False)
 
 
-## Contribuindo
+Screen.wrapper(demo)
+
+with open('dds.json') as f:
+    dados = json.load(f)
+
+    print(dados["contatoInfos"]["email"])
+
+
+
+armaArt = """
+  .-------..___  
+  '-._     :_.-' 
+      ) _ (      
+     '-' '-'     
+"""
+
+print(armaArt)
+
+
+
+nomerepo = input('nome repo:? ')
+
+title = input('What title:? ')
+
+description = input('What description:? ')
+
+comoUsar = input('Como usar:? ')
+
+technologiesUsed = input('technologies used:? ')
+
+Contributing = """## Contribuindo
 
 ![Contribuições](https://img.shields.io/badge/Contribui%C3%A7%C3%B5es-Bem--vindas-blueviolet)
 
@@ -42,9 +69,41 @@ Se você deseja contribuir para o projeto, siga estas etapas:
    git push origin minha-feature
    ```
 5. Abra um Pull Request no GitHub.
+"""
+
+contact = f"""## Contato
+
+- **Email**: [{dados["contatoInfos"]["email"]}](mailto:{dados["user"]["nomeGThub"]})
+- **Instagram**: [jajakkk](url)
+- **Portfolio**: [eduklartdev.github.io](https://eduklartdev.github.io/pt/)"""
 
 
 
+
+tituloEStts = f"""<div align="center">
+
+# 🌟 {title}
+
+![Status](https://img.shields.io/badge/Status-Em%20Desenvolvimento-orange?style=for-the-badge)
+![Licença](https://img.shields.io/badge/Licença-MIT-green?style=for-the-badge)
+![Estrelas](https://img.shields.io/github/stars/{dados['user']['nomeGThub']}/{nomerepo}?style=social)
+
+**{description}** 🚀
+
+</div>
+"""
+
+comoUsarTXT = f"""
+## 🚀 Como Executar 
+{comoUsar}
+"""
+
+tecUsa = f"""
+## 🛠 Tecnologias Utilizadas
+{technologiesUsed}
+"""
+
+tks = f"""
     ## Agradecimentos
 
 ![Português](https://img.shields.io/badge/lang-pt--BR-green?style=flat&logo=data:image/png;base64,iVBORw0KGgoAAAANSUh...)  
@@ -58,9 +117,21 @@ Se você deseja contribuir para o projeto, siga estas etapas:
 
 ![Made with ❤️](https://img.shields.io/badge/Feito%20com-%E2%9D%A4-red)
 
-## Contato
+"""
 
-- **Email**: [eduardo.santucci@proton.me](mailto:EduKlArtDev)
-- **Instagram**: [jajakkk](url)
-- **Portfolio**: [eduklartdev.github.io](https://eduklartdev.github.io/pt/)
+array = [tituloEStts,comoUsarTXT,tecUsa,Contributing,tks,contact]
 
+#########################################
+
+
+   # r – leitura (padrão).
+  #  w – gravação.
+ #   a – adição.
+#    b – binário.
+
+
+
+
+with open('README.md','w',encoding='utf-8') as w:
+    for teste in array:
+        w.write(str(teste) + '\n\n')
